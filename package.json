@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-native-module",
+  "version": "0.0.1",
+  "description": "Experimental package",
+  "main": "dist/lib/index.js",
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "compile": "tsc -p .",
+    "start": "node dist/lib/index.js",
+    "test": "node dist/test/index.js"
+  },
+  "author": "Shihab Mridh <shihabmridha@gmail.com>",
+  "license": "ISC",
+  "engines": {
+    "node": ">=10"
+  },
+  "binary": {
+    "napi_versions": [
+      3
+    ]
+  },
+  "gypfile": true,
+  "dependencies": {
+    "bindings": "1.5.0",
+    "node-addon-api": "2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "12.12.6",
+    "@types/bindings": "1.3.0"
+  }
+}
